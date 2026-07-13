@@ -1,12 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shashank Singh Resume</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
+
+    #pdf-container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    /* Small tablets */
+    @media (max-width: 1024px) {
+        iframe {
+            height: 100vh;
+        }
+    }
+
+    /* Phones */
+    @media (max-width: 768px) {
+        body {
+            overflow: auto;
+        }
+
+        #pdf-container {
+            display: none;
+        }
+    }
+</style>
+</head>
+
+<body>
+
 <div id="pdf-container">
     <iframe
         src="shashank_resume_july.pdf"
-        title="Resume">
+        title="Shashank Resume">
     </iframe>
 </div>
 
 <script>
-if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    window.location.href = "shashank_resume_july.pdf";
+const isMobile = /Android|iPhone|iPad|iPod|Windows Phone|webOS|BlackBerry/i.test(navigator.userAgent);
+
+if (isMobile) {
+    window.location.replace("shashank_resume_july.pdf");
 }
 </script>
+
+</body>
+</html>
