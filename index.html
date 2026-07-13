@@ -1,98 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shashank Singh | Resume</title>
+<div id="pdf-container">
+    <iframe
+        src="shashank_resume_july.pdf"
+        title="Resume">
+    </iframe>
+</div>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<div id="mobile-view" style="display:none;text-align:center;padding:40px;">
+    <h2>Resume</h2>
+    <p>Your browser doesn't support embedded PDFs well.</p>
 
-body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:#f5f5f5;
-}
-
-header{
-    background:#111827;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:16px 20px;
-    gap:16px;
-    flex-wrap:wrap;
-}
-
-h1{
-    font-size:20px;
-    font-weight:600;
-}
-
-.btn{
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    padding:10px 18px;
-    border-radius:6px;
-    font-weight:600;
-    white-space:nowrap;
-}
-
-.btn:hover{
-    background:#1d4ed8;
-}
-
-iframe{
-    width:100%;
-    height:calc(100vh - 76px);
-    border:none;
-}
-
-/* Mobile */
-@media (max-width:768px){
-
-    header{
-        flex-direction:column;
-        justify-content:center;
-        text-align:center;
-    }
-
-    h1{
-        font-size:18px;
-    }
-
-    .btn{
-        width:100%;
-        max-width:280px;
-        text-align:center;
-    }
-
-    iframe{
-        height:calc(100vh - 140px);
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>Shashank Singh | Resume</h1>
-
-    <a href="shashank_resume_july.pdf" class="btn" download>
-        Download Resume
+    <a class="btn" href="shashank_resume_july.pdf" target="_blank">
+        View Resume
     </a>
-</header>
+</div>
 
-<iframe
-    src="shashank_resume_july.pdf"
-    title="Resume">
-</iframe>
-
-</body>
-</html>
+<script>
+if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    document.getElementById("pdf-container").style.display = "none";
+    document.getElementById("mobile-view").style.display = "block";
+}
+</script>
